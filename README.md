@@ -1,4 +1,4 @@
-# Git Operations Agent (GitOperationsAgent)
+#GitBit
 
 A comprehensive Python-based git repository management and version control operations agent.
 
