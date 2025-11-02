@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+gitbit.egg-info/PKG-INFO
+gitbit.egg-info/SOURCES.txt
+gitbit.egg-info/dependency_links.txt
+gitbit.egg-info/requires.txt
+gitbit.egg-info/top_level.txt
+gitops/__init__.py
+gitops/agents.py
+tests/test_agent.py

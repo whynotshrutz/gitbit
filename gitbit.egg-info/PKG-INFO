@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: gitbit
+Version: 0.1.0
+Summary: A comprehensive Git repository management and version control operations agent
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: gitpython>=3.1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: black>=22.0; extra == "dev"
+Requires-Dist: mypy>=0.990; extra == "dev"
+Requires-Dist: pylint>=2.15; extra == "dev"
+
+# Git Operations Agent (GitOperationsAgent)
+
+A comprehensive Python-based git repository management and version control operations agent.
+
+## Features
+
+- Clone repositories with branch-specific targeting
+- Create and manage branches intelligently
+- Handle git state and operation history
+- Commit changes with descriptive messages
+- Push branches with conflict resolution
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+For development:
+
+```bash
+pip install -e ".[dev]"
+```
+
+## Usage
+
+```python
+from gitops.agent import GitOperationsAgent
+
+# Initialize the agent
+agent = GitOperationsAgent()
+
+# Clone a repository
+agent.clone_repository("https://github.com/user/repo.git", branch="main")
+
+# Create a new branch
+branch_name = agent.create_unique_branch("feature")
+
+# Make changes and commit
+agent.commit_changes("Add new feature")
+
+# Push changes
+agent.push_branch()
+
+# Get repository status
+status = agent.get_repository_status()
+print(status)
+```
+
+## Development
+
+### Running Tests
+
+```bash
+pytest
+```
+
+### Code Style
+
+This project uses black for code formatting:
+
+```bash
+black .
+```
+
+### Type Checking
+
+```bash
+mypy .
+```
+
+## License
+
+MIT License
