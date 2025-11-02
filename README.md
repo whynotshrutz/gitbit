@@ -1,4 +1,4 @@
-# GitBit
+# Git Operations Agent (GitOperationsAgent)
 
 A comprehensive Python-based git repository management and version control operations agent.
 
@@ -25,7 +25,7 @@ pip install -e ".[dev]"
 ## Usage
 
 ```python
-from gitops.agent import GitOperationsAgent
+from gitops.agents import GitOperationsAgent
 
 # Initialize the agent
 agent = GitOperationsAgent()
@@ -68,7 +68,3 @@ black .
 ```bash
 mypy .
 ```
-
-## License
-
-MIT License
